@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "flowbite";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+.style1 {
+  @apply absolute -z-10 bg-gold text-whiteof rounded-full px-5 py-1 opacity-0 translate-x-32 group-hover:opacity-100 group-hover:-translate-x-5 duration-300;
+}
+.style2 {
+  @apply *:rounded-full *:flex *:items-center *:justify-end *:duration-300 *:bg-pale *:my-2 capitalize;
+}
+.style3 {
+  @apply hover:cursor-pointer duration-150 rounded-full h-10 w-10 flex justify-center items-center text-whiteof bg-pale hover:bg-palehov;
+}
+.style4 {
+  @apply w-10 h-10 grid place-items-center text-whiteof rounded-full hover:bg-gold duration-300;
+}
+.style5 {
+  @apply w-full p-3 pl-4 duration-100 dark:text-whiteof dark:placeholder-whiteof text-[unset] placeholder-[unset] text-xs rounded-full focus:outline-none bg-pale border-2 border-transparent focus:border-2 focus:border-gold;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+/* .cv-btn:hover {
+  background-color: #f7c400;
+  color: #f8f9fa73;
+} */
+
+.custom-scroll-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scroll-modal::-webkit-scrollbar-track {
+  background: #e0ddd4;
+  background: #575656;
+  border-radius: 5px;
+}
+
+.custom-scroll-modal::-webkit-scrollbar-thumb {
+  background: #f2ebeb;
+  border-radius: 5px;
+}
+
+.custom-scroll-modal::-webkit-scrollbar-thumb:hover {
+  background: #dad7d7;
+}
+
+.custom-scroll-modal::-webkit-scrollbar-button {
+  display: none;
+}
+
+.active {
+  background-color: #feb401;
+}
