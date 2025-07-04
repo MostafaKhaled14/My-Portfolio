@@ -2,12 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { MyContext } from "../../context/MyContext";
 import { motion } from "framer-motion";
 import Title from "../Title/Title";
-import image1 from "../../assets/img31.jpg";
-import image2 from "../../assets/img32.jpg";
-import image3 from "../../assets/img33.jpg";
-import image4 from "../../assets/img34.jpg";
-import image5 from "../../assets/img35.jpg";
-import image6 from "../../assets/img36.jpg";
+import images from "../Images/Images";
 import Layer from "../Layer/Layer";
 
 export default function Blog() {
@@ -16,7 +11,7 @@ export default function Blog() {
   const dummyData = [
     {
       id: 1,
-      image: image1,
+      image: images.image31,
       title: "My First Steps into Programming: Learning HTML with the Help of a Friend",
       description: "My journey into programming began with a simple push from a close and supportive friend.",
       details: {
@@ -32,7 +27,7 @@ export default function Blog() {
     },
     {
       id: 2,
-      image: image2,
+      image: images.image32,
       title: "Why CSS Transitions Don’t Work with Height: auto and How to Fix It",
       description: "Transitions from height zero to auto won’t animate because CSS can’t interpolate undefined values.",
       details: {
@@ -48,7 +43,7 @@ export default function Blog() {
     },
     {
       id: 3,
-      image: image3,
+      image: images.image33,
       title: "How to Work with APIs in JavaScript: A Step-by-Step Beginner's Guide",
       description: "APIs let you fetch data from external sources using JavaScript to build dynamic web applications easily.",
       details: {
@@ -64,7 +59,7 @@ export default function Blog() {
     },
     {
       id: 4,
-      image: image4,
+      image: images.image34,
       title: "How I Built My Portfolio Using React and Tailwind: Practical Tips and Lessons",
       description: "I built my personal portfolio using React and Tailwind, combining skills, components, and useful React hooks.",
       details: {
@@ -80,7 +75,7 @@ export default function Blog() {
     },
     {
       id: 5,
-      image: image5,
+      image: images.image35,
       title: "My Front-End Journey: From a Friend’s Help to Route Academy, School Platform",
       description: "My journey into front-end development started with a friend’s support and grew with expert training.",
       details: {
@@ -96,7 +91,7 @@ export default function Blog() {
     },
     {
       id: 6,
-      image: image6,
+      image: images.image36,
       title: "How to Use AI Tools and GitHub to Learn and Solve Code Problems",
       description: "AI tools and GitHub help developers learn faster, debug issues, and build better projects with confidence.",
       details: {
@@ -126,74 +121,76 @@ export default function Blog() {
 
   return (
     <>
-      <Layer />
-      <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}>
-        <div className="container m-auto px-12 lg:px-28 pb-6">
-          <Title title1={"my"} title2={"blog"} back={"posts"} />
+      <section>
+        <Layer />
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}>
+          <div className="container m-auto px-12 lg:px-28 pb-6">
+            <Title title1={"my"} title2={"blog"} back={"posts"} />
 
-          <div className="grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {dummyData.map((blog) => (
-              <div key={blog.id} className="group cursor-pointer max-h-[415px] overflow-hidden pr-4" onClick={() => setIsSelected(blog)}>
-                <div className="overflow-hidden rounded-t-md">
-                  <img src={blog.image} alt={blog.title} className="w-full duration-300 group-hover:scale-110" />
+            <div className="grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {dummyData.map((blog) => (
+                <div key={blog.id} className="group cursor-pointer max-h-[415px] overflow-hidden pr-4" onClick={() => setIsSelected(blog)}>
+                  <div className="overflow-hidden rounded-t-md">
+                    <img src={blog.image} alt={blog.title} className="w-full duration-300 group-hover:scale-110" />
+                  </div>
+                  <span className="w-full h-1.5 rounded-xl bg-gold block"></span>
+                  <div className="p-5 min-h-[220px]  rounded-b-md *:pb-4 bg-myblack text-whiteof dark:bg-pale">
+                    <h2 className="font-extrabold text-lg capitalize group-hover:text-gold duration-300">{blog.title}</h2>
+                    <p className="font-semibold text-sm">{blog.description}</p>
+                  </div>
                 </div>
-                <span className="w-full h-1.5 rounded-xl bg-gold block"></span>
-                <div className="p-5 min-h-[220px]  rounded-b-md *:pb-4 bg-pale dark:text-whiteof">
-                  <h2 className="font-extrabold text-lg capitalize group-hover:text-gold duration-300">{blog.title}</h2>
-                  <p className="font-semibold text-sm">{blog.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {isSelected && (
-            <div
-              onClick={() => setIsSelected(null)}
-              className="bg-whiteof dark:bg-black fixed inset-0 flex justify-center items-center z-[99999999999999]"
-            >
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, ease: "easeOut" }}>
-                <div className="flex justify-end relative -top-1 -right-5 z-[55555]">
-                  <button className="text-gold text-xl" onClick={() => setIsSelected(false)}>
-                    x
-                  </button>
-                </div>
-
-                <div
-                  onClick={(e) => e.stopPropagation()}
-                  className="bg-mywhite text-myblack dark:bg-myblack dark:text-whiteof custom-scroll-modal rounded-lg px-2 sm:px-8 max-w-72 sm:max-w-xl md:max-w-2xl lg:max-w-3xl relative overflow-y-auto max-h-[60vh] sm:max-h-[80vh]"
-                >
-                  <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}>
-                    <Title title1={"post"} title2={"details"} back={"posts"} />
-                    <div className="grid sm:flex *:pr-2 *:sm:pr-5 *:py-1 text-xs sm:text-base whitespace-nowrap capitalize">
-                      <div className="flex items-center ">
-                        <i className="fa-regular fa-id-badge text-gold pr-2"></i>
-                        <h3>{isSelected.info.names}</h3>
-                      </div>
-                      <div className="flex items-center ">
-                        <i className="fa-solid fa-calendar-days text-gold pr-2"></i>
-                        <h3>{isSelected.info.date}</h3>
-                      </div>
-                      <div className="flex items-center ">
-                        <i className="fa-solid fa-indent text-gold pr-2"></i>
-                        <h3>{isSelected.info.keywords}</h3>
-                      </div>
-                    </div>
-                    <h2 className="text-2xl font-bold my-4">{isSelected.title}</h2>
-                    <img src={isSelected.image} alt={isSelected.title} className="w-full h-64 object-cover rounded" />
-                    <p className="my-4">{isSelected.description}</p>
-                    <div className="flex py-3">
-                      <i className="fa-solid fa-quote-left pr-4 text-gold text-4xl hidden sm:block"></i>
-                      <p className="text-sm">{isSelected.details.p1}</p>
-                    </div>
-                    <p className="text-sm">{isSelected.details.p2}</p>
-                    <p className="my-4 text-sm">{isSelected.details.p3}</p>
-                  </motion.div>
-                </div>
-              </motion.div>
+              ))}
             </div>
-          )}
-        </div>
-      </motion.div>
+
+            {isSelected && (
+              <div
+                onClick={() => setIsSelected(false)}
+                className="bg-whiteof dark:bg-black fixed inset-0 flex justify-center items-center z-[99999999999999]"
+              >
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, ease: "easeOut" }}>
+                  <div className="flex justify-end relative -top-1 -right-5 z-[55555]">
+                    <button className="text-gold text-xl" onClick={() => setIsSelected(false)}>
+                      x
+                    </button>
+                  </div>
+
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    className="bg-mywhite text-myblack dark:bg-myblack dark:text-whiteof custom-scroll-modal rounded-lg px-2 sm:px-8 max-w-72 sm:max-w-xl md:max-w-2xl lg:max-w-3xl relative overflow-y-auto max-h-[60vh] sm:max-h-[80vh]"
+                  >
+                    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }}>
+                      <Title title1={"post"} title2={"details"} back={"posts"} />
+                      <div className="grid sm:flex *:pr-2 *:sm:pr-5 *:py-1 text-xs sm:text-base whitespace-nowrap capitalize">
+                        <div className="flex items-center ">
+                          <i className="fa-regular fa-id-badge text-gold pr-2"></i>
+                          <h3>{isSelected.info.names}</h3>
+                        </div>
+                        <div className="flex items-center ">
+                          <i className="fa-solid fa-calendar-days text-gold pr-2"></i>
+                          <h3>{isSelected.info.date}</h3>
+                        </div>
+                        <div className="flex items-center ">
+                          <i className="fa-solid fa-indent text-gold pr-2"></i>
+                          <h3>{isSelected.info.keywords}</h3>
+                        </div>
+                      </div>
+                      <h2 className="text-2xl font-bold my-4">{isSelected.title}</h2>
+                      <img src={isSelected.image} alt={isSelected.title} className="w-full h-64 object-cover rounded" />
+                      <p className="my-4">{isSelected.description}</p>
+                      <div className="flex py-3">
+                        <i className="fa-solid fa-quote-left pr-4 text-gold text-4xl hidden sm:block"></i>
+                        <p className="text-sm">{isSelected.details.p1}</p>
+                      </div>
+                      <p className="text-sm">{isSelected.details.p2}</p>
+                      <p className="my-4 text-sm">{isSelected.details.p3}</p>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              </div>
+            )}
+          </div>
+        </motion.div>
+      </section>
     </>
   );
 }

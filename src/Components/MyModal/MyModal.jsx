@@ -15,7 +15,7 @@ export default function MyModal() {
                 x
               </button>
             </div>
-            <div onClick={(e) => e.stopPropagation()} className="custom-scroll-modal relative overflow-y-auto  max-h-[80vh]">
+            <div onClick={(e) => e.stopPropagation()} className="custom-scroll-modal relative overflow-y-auto  max-h-[65vh] sm:max-h-[80vh]">
               <About withLayerAnimation={false} />
             </div>
           </motion.div>

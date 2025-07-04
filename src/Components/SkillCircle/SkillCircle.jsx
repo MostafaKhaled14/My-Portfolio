@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import { useInView } from "react-intersection-observer";
 
-export function SkillCircle({ percentage, label }) {
+export default function SkillCircle({ percentage, label }) {
   const [value, setValue] = useState(0);
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -16,7 +16,6 @@ export function SkillCircle({ percentage, label }) {
       setValue((rate) => {
         if (inView && rate < percentage) return rate + 1;
         if (!inView && rate > 0) return rate - 1;
-        // clearInterval(interval);
         return inView ? percentage : 0;
       });
     }, 10);

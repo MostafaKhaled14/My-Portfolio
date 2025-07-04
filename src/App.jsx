@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
@@ -9,7 +10,7 @@ import Blog from "./Components/Blog/Blog";
 
 const Routers = createHashRouter([
   {
-    path: "",
+    path: "/",
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
@@ -22,12 +23,10 @@ const Routers = createHashRouter([
   },
 ]);
 
-function App() {
+export default function App() {
   return (
     <>
       <RouterProvider router={Routers}></RouterProvider>
     </>
   );
 }
-
-export default App;

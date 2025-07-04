@@ -8,8 +8,9 @@ import Layer from "../Layer/Layer";
 export default function Contact() {
   return (
     <>
-    <Layer />
       <section>
+        <Layer />
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +54,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex gap-4 pt-4 *:text-whiteof *:duration-150 *:w-10 *:h-10 *:flex *:items-center *:justify-center *:rounded-full *:bg-myground hover:*:bg-gold *:cursor-pointer">
+                  <div className="flex gap-4 pt-4 *:text-whiteof *:duration-150 *:w-10 *:h-10 *:flex *:items-center *:justify-center *:rounded-full *:bg-pale hover:*:bg-gold *:cursor-pointer">
                     <Link target="_blank" to={"https://www.facebook.com/mstfy.khald.952685/"}>
                       <i className="fab fa-facebook-f" />
                     </Link>
