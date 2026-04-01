@@ -23,7 +23,7 @@ export default function Home() {
               <div className="xl:w-[85%] min-[1537px]:w-[850px] h-fit lg:h-screen overflow-hidden relative z-10 lg:block flex justify-center items-top">
                 <div className="w-[1000px] h-full absolute top-0 hidden lg:block -left-[650px] -z-20 bg-gold skew-x-[25deg]"></div>
                 <img
-                  src={images.image52}
+                  src={images.image51}
                   className="w-[220px] sm:w-[300px] md:w-[380px] lg:w-full h-[300px] sm:h-[400px] md:h-[420px] lg:h-full rounded-[55px] object-cover p-8"
                   alt="img"
                 />

@@ -34,7 +34,7 @@ import image34 from "../../assets/img34.jpg";
 import image35 from "../../assets/img35.jpg";
 import image36 from "../../assets/img36.jpg";
 import image51 from "../../assets/profile1.jpg";
-import image52 from "../../assets/profile2.jpg";
+import image52 from "../../assets/my-photo.jpg";
 
 const images = {
   image1,
