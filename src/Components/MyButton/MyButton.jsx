@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function MyButton({ btnName, iconName }) {
   const [isHovered, setIsHovered] = useState(false);

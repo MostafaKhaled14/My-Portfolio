@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
@@ -7,6 +6,7 @@ import Layout from "./Components/Layout/Layout";
 import Portfolio from "./Components/Portfolio/Portfolio";
 import Contact from "./Components/Contact/Contact";
 import Blog from "./Components/Blog/Blog";
+import Admin from "./Components/Admin/Admin";
 
 const Routers = createHashRouter([
   {
@@ -19,6 +19,7 @@ const Routers = createHashRouter([
       { path: "portfolio", element: <Portfolio /> },
       { path: "contact", element: <Contact /> },
       { path: "blog", element: <Blog /> },
+      { path: "Admin", element: <Admin /> },
     ],
   },
 ]);

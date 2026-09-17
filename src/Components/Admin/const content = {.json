@@ -1,0 +1,46 @@
+  const content = {
+    projects: {
+      all: [],
+      react_JS: [{ id: 1, image: images.image1, url: "https://mostafakhaled14.github.io/E-Commerce-App/" }],
+      bootstrap: [{ id: 7, image: images.image7, url: "https://mostafakhaled14.github.io/DevFolio-By-Bootstrap/" }],
+      css: [
+        { id: 9, image: images.image9, url: "https://mostafakhaled14.github.io/progect-leon/" },
+        { id: 2, image: images.image2, url: "https://mostafakhaled14.github.io/Mealify-Progect/" },
+        { id: 8, image: images.image8, url: "https://mostafakhaled14.github.io/progect4-fokir/" },
+        { id: 3, image: images.image3, url: "https://mostafakhaled14.github.io/progect2/" },
+        { id: 4, image: images.image4, url: "https://mostafakhaled14.github.io/elmeshkateb/" },
+        { id: 5, image: images.image5, url: "https://mostafakhaled14.github.io/Q-And-S-project-/" },
+      ],
+    },
+    tasks: {
+      all: [],
+      react_JS: [
+        { id: 100, image: images.image11, url: "https://mostafakhaled14.github.io/APIs--Task/" },
+        { id: 16, image: images.image17, url: "https://mostafakhaled14.github.io/My-Test-1/" },
+        { id: 12, image: images.image13, url: "https://mostafakhaled14.github.io/Routing/" },
+      ],
+      vanilla_JS: [
+        { id: 6, image: images.image6, url: "https://mostafakhaled14.github.io/Portfolio-task/" },
+        { id: 10, image: images.image10, url: "https://mostafakhaled14.github.io/Login-System-task/" },
+        { id: 11, image: images.image12, url: "https://mostafakhaled14.github.io/bookmark-js-3/" },
+        { id: 13, image: images.image14, url: "https://mostafakhaled14.github.io/Random-Quote-Generatorr/" },
+        { id: 14, image: images.image15, url: "https://mostafakhaled14.github.io/Navigate-tasck/" },
+        { id: 17, image: images.image18, url: "https://mostafakhaled14.github.io/stupid-Task/" },
+      ],
+      css: [
+        { id: 15, image: images.image16, url: "https://mostafakhaled14.github.io/grid-test/" },
+        { id: 24, image: images.image24, url: "https://mostafakhaled14.github.io/CSS-task-1/" },
+        { id: 25, image: images.image25, url: "https://mostafakhaled14.github.io/CSS-task-2/" },
+        { id: 26, image: images.image26, url: "https://mostafakhaled14.github.io/CSS-task-3/" },
+        { id: 27, image: images.image27, url: "https://mostafakhaled14.github.io/CSS-task-4/" },
+        { id: 28, image: images.image28, url: "https://mostafakhaled14.github.io/CSS-task-5/" },
+      ],
+      html: [
+        { id: 19, image: images.image19, url: "https://mostafakhaled14.github.io/HTML-Task1/" },
+        { id: 20, image: images.image20, url: "https://mostafakhaled14.github.io/HTML-Task-2/" },
+        { id: 21, image: images.image21, url: "https://mostafakhaled14.github.io/HTML-Task-3/" },
+        { id: 22, image: images.image22, url: "https://mostafakhaled14.github.io/HTML-Task-4/" },
+        { id: 23, image: images.image23, url: "https://mostafakhaled14.github.io/HTML-Task-5/" },
+      ],
+    },
+  };

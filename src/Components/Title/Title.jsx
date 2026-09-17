@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Title({ title1, title2, back }) {
   return (
     <>

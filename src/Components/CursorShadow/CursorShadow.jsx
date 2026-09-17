@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function CursorShadow() {
   const [position, setPosition] = useState({ left: 0, top: 0 });
-  let target = { left: 0, top: 0 };
-  let current = { left: 0, top: 0 };
+  const target = useRef({ left: 0, top: 0 });
+  const current = useRef({ left: 0, top: 0 });
 
   useEffect(() => {
     const handleMove = (e) => {
-      target = { left: e.clientX, top: e.clientY };
+      target.current = { left: e.clientX, top: e.clientY };
     };
 
     const animate = () => {
-      current.left += (target.left - current.left) * 0.1;
-      current.top += (target.top - current.top) * 0.1;
-      setPosition({ left: current.left, top: current.top });
+      current.current.left += (target.current.left - current.current.left) * 0.1;
+      current.current.top += (target.current.top - current.current.top) * 0.1;
+      setPosition({ left: current.current.left, top: current.current.top });
       requestAnimationFrame(animate);
     };
 
