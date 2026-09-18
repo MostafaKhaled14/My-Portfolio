@@ -50,17 +50,15 @@ export default function Home() {
             className="flex justify-center"
           >
             <div className="flex flex-col justify-center lg:grid lg:grid-cols-2 grid-rows-3 lg:grid-rows-1 lg:gap-4 lg:h-screen bg-whiteof dark:bg-myblack text-black dark:text-white max-w-[1536px]">
-              {/* الصورة - بتظهر طول الوقت */}
-              <div className="xl:w-[85%] min-[1537px]:w-[850px] h-fit lg:h-screen overflow-hidden relative z-10 lg:block flex justify-center items-top">
+              <div className="xl:w-[85%] min-[1537px]:w-[700px] h-fit lg:h-screen overflow-hidden relative z-10 lg:block flex justify-center items-top">
                 <div className="w-[1000px] h-full absolute top-0 hidden lg:block -left-[650px] -z-20 bg-gold skew-x-[25deg]"></div>
                 <img
-                  src={homeInfo?.imageUrl || images.image51}
+                  src={homeInfo?.imageUrl || images.myPhoto2}
                   className="w-[220px] sm:w-[300px] md:w-[380px] lg:w-full h-[300px] sm:h-[400px] md:h-[420px] lg:h-full rounded-[55px] object-cover p-8"
                   alt="profile"
                 />
               </div>
 
-              {/* التكست - عليه لودر بس */}
               <div className="px-2 lg:pr-20 flex justify-center items-center">
                 <div className="w-3/4 px-1 sm:px-4 md:px-0 dark:bg-myblack dark:text-whiteof lg:text-start text-center pb-8">
                   {loading || !homeInfo ? (

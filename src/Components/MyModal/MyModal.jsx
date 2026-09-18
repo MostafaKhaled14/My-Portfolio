@@ -9,7 +9,12 @@ export default function MyModal() {
     <>
       {isSelected && (
         <div onClick={() => setIsSelected(false)} className="bg-black bg-opacity-40 fixed inset-0 z-[99999999] flex justify-center items-center">
-          <Motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, ease: "easeOut" }} className="max-w-[72%]">
+          <Motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="max-w-[72%] min-w-[72%]"
+          >
             <div className="flex justify-end relative -top-1 -right-5">
               <button className="text-gold text-xl" onClick={() => setIsSelected(false)}>
                 x
